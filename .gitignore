@@ -1,6 +1,9 @@
 .gradle
 /build/
 !gradle/wrapper/gradle-wrapper.jar
+/gradlew
+/gradlew.bat
+/gradle
 
 ### STS ###
 .apt_generated
@@ -25,3 +28,11 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+# webflux-workshop module
+/webflux-workshop/build
+/webflux-workshop/.gradle
+/webflux-workshop/gradle
+/webflux-workshop/!gradle/wrapper/gradle-wrapper.jar
+/webflux-workshop/gradlew
+/webflux-workshop/gradlew.bat
