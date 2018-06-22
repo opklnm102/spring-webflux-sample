@@ -1,5 +1,5 @@
 .gradle
-/build/
+build/
 !gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###
@@ -16,18 +16,4 @@
 *.iws
 *.iml
 *.ipr
-/out/
-
-### NetBeans ###
-/nbproject/private/
-/build/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-# webflux-workshop module
-/webflux-workshop/build
-/webflux-workshop/.gradle
-/webflux-workshop/!gradle/wrapper/gradle-wrapper.jar
-/webflux-workshop/out/
+out/
