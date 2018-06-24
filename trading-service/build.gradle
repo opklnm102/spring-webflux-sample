@@ -1,0 +1,49 @@
+buildscript {
+    ext {
+        springBootVersion = '2.0.3.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'me.dong'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-webflux')
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+
+    compileOnly('org.projectlombok:lombok')
+
+    // 기본적으로 spring-boot-starter-webflux는 spring-boot-starter-reactor-netty에 의존하여 Recator Netty를 WAS로 사용
+    // tomcat, Undertow, Jetty를 사용할 수도 있다
+    compile('org.springframework.boot:spring-boot-starter-tomcat')
+
+    // MongoDB를 reactive driver, in memory MongoDB로 사용
+    compile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')  // in Memory Mongo
+    compile('org.springframework.boot:spring-boot-starter-data-mongodb-reactive')
+
+    // webjars
+    compile('org.webjars:bootstrap:3.3.7')
+    compile('org.webjars:highcharts:5.0.8')
+
+    runtime('org.springframework.boot:spring-boot-devtools')
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('io.projectreactor:reactor-test')
+}
