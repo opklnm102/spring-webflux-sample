@@ -2,3 +2,5 @@ rootProject.name = 'spring-webflux-sample'
 
 include 'webflux-workshop:stock-quotes'
 include 'webflux-workshop:trading-service'
+
+include 'demo'
